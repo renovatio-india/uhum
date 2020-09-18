@@ -64,8 +64,8 @@ flutter pub get
 ```
 
 To Do:
-- [.] Add firebase_auth package
-- [.] Add cloud_firestore package
+- [x] Add firebase_auth package
+- [x] Add cloud_firestore package
 - [ ] Add google-services.json file in /android/app directory (needed for firebase)
 - [ ] Add google-services dependency in /android/build.gradle (needed for firebase)
 - [ ] Apply google-services plugin in /android/app/build.gradle (needed for firebase)
