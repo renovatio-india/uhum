@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:uhum/screens/authenticate/authenticate.dart';
 import 'package:uhum/screens/home/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'Route_Generator.dart';
 
 void main() {
