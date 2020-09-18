@@ -58,7 +58,7 @@ git push origin <branch-name>
 
 
 
-To install firebase_auth package in your system:
+### To install firebase_auth and cloud_firestore packages in your system:
 ```
 flutter pub get
 ```
