@@ -55,3 +55,10 @@ git push origin <branch-name>
 - In the description, add details of what changes have been done to this branch.
 - Create the Pull request
 - Pull request can be merged after the default reviewers has approved the changes.
+
+
+
+To install firebase_auth package in your system:
+```
+flutter pub get
+```
