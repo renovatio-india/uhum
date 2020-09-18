@@ -62,3 +62,8 @@ git push origin <branch-name>
 ```
 flutter pub get
 ```
+
+To Do:
+- [] Add google-services.json file in /android/app directory (needed for firebase)
+- [] Add google-services dependency in /android/build.gradle (needed for firebase)
+- [] Apply google-services plugin in /android/app/build.gradle (needed for firebase)
