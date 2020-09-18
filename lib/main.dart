@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:uhum/screens/authenticate/authenticate.dart';
 import 'package:uhum/screens/home/home.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
 import 'Route_Generator.dart';
 
 void main() {
