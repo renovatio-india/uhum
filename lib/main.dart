@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:uhum/screens/authenticate/authenticate.dart';
-import 'package:uhum/screens/home/home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'Route_Generator.dart';
@@ -27,23 +25,5 @@ class MyApp extends StatelessWidget {
             RouteGenerator.generateroute, // define routes in this file
       ),
     );
-  }
-}
-
-class Wrapper extends StatefulWidget {
-  @override
-  _WrapperState createState() => _WrapperState();
-}
-
-class _WrapperState extends State<Wrapper> {
-  @override
-  Widget build(BuildContext context) {
-    /*autologin here
-    if auth successfull show home page
-    else show auth screen*/
-    if (false)
-      return HomePage();
-    else
-      return Authenticate();
   }
 }
