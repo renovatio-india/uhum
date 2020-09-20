@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uhum/screens/authenticate/authenticate.dart';
 import 'package:uhum/screens/home/home.dart';
 
 class Wrapper extends StatelessWidget {
@@ -6,6 +7,6 @@ class Wrapper extends StatelessWidget {
   Widget build(BuildContext context) {
     // return home page or authenticate page
 
-    return HomePage();
+    return Authenticate();
   }
 }
