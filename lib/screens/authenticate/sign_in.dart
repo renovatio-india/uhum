@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uhum/services/auth.dart';
 
 class SignIn extends StatefulWidget {
   @override
@@ -6,12 +7,27 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  final Authservice _auth = Authservice();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Sign in Page'),
+      ),
       body: Center(
-        child: Text("This is my signin page"),
+        child: RaisedButton(
+          child: Text('Sign in using email'),
+          onPressed: () async {
+            dynamic result = await _auth.signInPhone();
+            if (result == null) {
+              print('Error Signing in');
+            } else {
+              print('Signed in');
+              print(result);
+            }
+          },
+        ),
       ),
     );
   }
