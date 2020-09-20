@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:uhum/screens/authenticate/sign_in.dart';
 
 class Authenticate extends StatefulWidget {
   @override
@@ -12,7 +13,7 @@ class _AuthenticateState extends State<Authenticate> {
     return Scaffold(
       appBar: AppBar(),
       body: Center(
-        child: Text("Login or Reg screen"),
+        child: SignIn(),
       ),
     );
   }
