@@ -22,7 +22,6 @@ environment:
 
 dependencies:
   firebase_auth: ^0.18.0+1
-  cloud_firestore: ^0.14.0+2
   flutter:
     sdk: flutter
   provider: ^3.2.0
