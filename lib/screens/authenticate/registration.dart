@@ -13,139 +13,168 @@ class _RegistrationState extends State<Registration> {
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      body: Form(
+      resizeToAvoidBottomInset: false,
+      body: Container(
+        padding: EdgeInsets.only(bottom: 250),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            SizedBox(height: 15.0),
             Container(
-              padding: EdgeInsets.only(left:15),
-              height: size.height * 0.06,
-                width: size.width * 0.8,
-              decoration: BoxDecoration(
-                color: Colors.yellow[100],
-                borderRadius: BorderRadius.circular(100),
-                 boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          offset: Offset(0, 3),
-                          blurRadius: 7,
-                          spreadRadius: 3),
-                    ],
+                child: Image.asset(
+              'assets/Signup.jpg',
+              fit: BoxFit.contain,
+              height: 175,
+              width: 200,
+            )),
+            SizedBox(height: 12.0),
+            Container(
+              padding: EdgeInsets.only(left: 18),
+              width: size.width * 0.8,
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Full Name',
+                  style: TextStyle(color: Colors.black),
+                ),
               ),
+            ),
+            SizedBox(height: 2),
+            Container(
+              padding: EdgeInsets.only(left: 15),
+              height: size.height * 0.05,
+              width: size.width * 0.8,
               child: TextFormField(
                 decoration: InputDecoration(
-                    border: InputBorder.none, hintText: 'Full Name'),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide(color: Colors.blue[700])),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                    borderSide: BorderSide(
+                      width: 1,
+                      color: Colors.blue[700],
+                    ),
+                  ),
+                ),
                 validator: (val) => val.isEmpty ? 'Enter full name' : null,
                 onChanged: (val) {},
               ),
             ),
-            SizedBox(height: 15.0),
+            SizedBox(height: 12),
             Container(
-              padding: EdgeInsets.only(left:15),
-              height: size.height * 0.06,
-                width: size.width * 0.8,
-              decoration: BoxDecoration(
-                color: Colors.deepPurple[100],
-                borderRadius: BorderRadius.circular(100),
-                 boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          offset: Offset(0, 3),
-                          blurRadius: 7,
-                          spreadRadius: 3),
-                    ],
+              padding: EdgeInsets.only(left: 18),
+              width: size.width * 0.8,
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Phone Number',
+                  style: TextStyle(color: Colors.black),
+                ),
               ),
+            ),
+            SizedBox(height: 2),
+            Container(
+              padding: EdgeInsets.only(left: 15),
+              height: size.height * 0.05,
+              width: size.width * 0.8,
               child: TextFormField(
                 decoration: InputDecoration(
-                    border: InputBorder.none, hintText: 'Email Address'),
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide(color: Colors.blue[700])),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                    borderSide: BorderSide(
+                      width: 1,
+                      color: Colors.blue[700],
+                    ),
+                  ),
+                ),
                 validator: (val) => val.isEmpty ? 'Enter  Email' : null,
                 onChanged: (val) {},
               ),
             ),
-            SizedBox(height: 10.0),
+            SizedBox(height: 12),
             Container(
-              padding: EdgeInsets.only(left:15),
-              height: size.height * 0.06,
-                width: size.width * 0.8,
-              decoration: BoxDecoration(
-                color: Colors.blue[100],
-                
-                borderRadius: BorderRadius.circular(100),
-                 boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          offset: Offset(0, 3),
-                          blurRadius: 7,
-                          spreadRadius: 3),
-                    ],
+              padding: EdgeInsets.only(left: 18),
+              width: size.width * 0.8,
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Age',
+                  style: TextStyle(color: Colors.black),
+                ),
               ),
+            ),
+            SizedBox(height: 2),
+            Container(
+              padding: EdgeInsets.only(left: 15),
+              height: size.height * 0.05,
+              width: size.width * 0.8,
               child: TextFormField(
-                decoration:
-                    InputDecoration(border: InputBorder.none, hintText: 'Phone Number'),
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      borderSide: BorderSide(color: Colors.blue[700])),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                    borderSide: BorderSide(
+                      width: 1,
+                      color: Colors.blue[700],
+                    ),
+                  ),
+                ),
                 obscureText: true,
                 validator: (val) => val.isEmpty ? 'Enter Phone No.' : null,
                 onChanged: (val) {},
               ),
             ),
-            SizedBox(height: 15.0),
-             Container(
-              padding: EdgeInsets.only(left:15),
-              height: size.height * 0.06,
-                width: size.width * 0.8,
-              decoration: BoxDecoration(
-                color: Colors.orange[100],
-                borderRadius: BorderRadius.circular(100),
-                 boxShadow: [
-                      BoxShadow(
-                          color: Colors.grey.withOpacity(0.5),
-                          offset: Offset(0, 3),
-                          blurRadius: 7,
-                          spreadRadius: 3),
-                    ],
-              ),
-              child: TextFormField(
-                decoration:
-                    InputDecoration(border: InputBorder.none, hintText: 'Age'),
-                obscureText: true,
-                validator: (val) => val.isEmpty ? 'Enter Age' : null,
-                onChanged: (val) {},
-              ),
-            ),
-            SizedBox(height: 15.0),
+            SizedBox(height: 18.0),
             Container(
-               height: size.height * 0.06,
-                width: size.width * 0.8,
+              padding: EdgeInsets.only(left: 15),
+              height: size.height * 0.06,
+              width: size.width * 0.8,
               child: RaisedButton(
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(30.0),
+                    borderRadius: BorderRadius.circular(12.0),
                   ),
-                  child: Text('Submit',style: TextStyle(
-                          color: Colors.white,
-                        ),),
-                  color: Colors.blue,
+                  child: Text(
+                    'Submit',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  color: Colors.blue[700],
                   onPressed: () async {}),
             ),
-            SizedBox(height: 15.0),
             Container(
+                padding: EdgeInsets.only(left: 28),
                 child: Row(
-              children: <Widget>[
-                Text('Already have an account?'),
-                FlatButton(
-                  textColor: Colors.blue,
-                  child: Text(
-                    'Log in',
-                    style: TextStyle(fontSize: 15),
-                  ),
-                  onPressed: () {
-                    //signup screen
-                    widget.toggleView();
-                  },
-                )
-              ],
-              mainAxisAlignment: MainAxisAlignment.center,
-            ))
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        'Already have an account?',
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                    ),
+                    FlatButton(
+                      padding: EdgeInsets.only(right: 38),
+                      textColor: Colors.blue,
+                      child: Text(
+                        'Log in',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                      onPressed: () {
+                        //signup screen
+                        widget.toggleView();
+                      },
+                    )
+                  ],
+                ))
           ],
         ),
       ),
